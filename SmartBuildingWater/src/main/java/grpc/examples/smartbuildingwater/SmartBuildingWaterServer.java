@@ -57,9 +57,9 @@ public class SmartBuildingWaterServer extends GreeterImplBase {
 	
 	@Override
 	public void sayHello(HelloRequest request,  StreamObserver<HelloReply> responseObserver) {
-		    
+		    // this is connecting the client with the server
 		System.out.println("receiving hello request V 1.1");
-		
+		//printing the message
 		 HelloReply reply = HelloReply.newBuilder().setMessage("Hi out there " + request.getName()).build();
 	     
 		 responseObserver.onNext(reply);
